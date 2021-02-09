@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../common/Section';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import People from './images/people.svg';
+import AboutImage from './images/people.svg';
 import Spinner from '../common/Effects/Spinner';
 import Styles from './about.module.css';
 //firebase
@@ -31,7 +31,7 @@ class About extends React.Component {
                     {
                         <Row>
                             <Col md={6}>
-                                <Image src={People} className={Styles.image} />
+                                <Image src={AboutImage} className={Styles.image} />
                             </Col>
                             <Col className={Styles.content}>
                                 <h1 className={Styles.title}>About Us</h1>

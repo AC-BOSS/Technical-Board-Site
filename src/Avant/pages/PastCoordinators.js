@@ -1,17 +1,11 @@
 import React from 'react';
-import Coordinators from '../components/Coordinators';
+import Coordinators from '../components/Past-Coordinators';
 
 function PastCoordinators() {
     return ( 
-        <div>
-            {/* This component will render the heading in the form:-
-            Name
-            (Alternative Name)
-
-            If none of the above are provided, then the component will
-            only generate a link with an Image */}
+        <React.Fragment>
             <Coordinators />
-        </div>
+        </React.Fragment>
     );
 }
 

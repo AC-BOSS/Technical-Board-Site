@@ -1,7 +1,8 @@
 import Home from './Home';
+import PastCouncil from './PastCouncil';
 
 const Pages = {
-    Home,
+    Home, PastCouncil
 };
 
 export default Pages;

@@ -13,9 +13,7 @@ function App() {
 
     let page = useLocation();
     page = page.pathname;
-    console.log(page);
     page = URLMatcher.exec(page)[1].toLowerCase();
-    console.log(page);
 
     return (
         <React.Fragment>

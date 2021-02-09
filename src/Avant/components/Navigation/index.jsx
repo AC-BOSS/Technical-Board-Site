@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Image } from 'react-bootstrap';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import Styles from './nav.module.css';
-import AvantLogo from './logos/avant.svg';
+import AvantLogo from '../../Logo/avant.svg';
 
 function Navigation(props) {
     return (
@@ -30,10 +30,10 @@ function Navigation(props) {
                         <Nav.Link smooth as={Link} to={`/avant/#about`}>About Us</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link smooth as={Link} to={`/avant/#events`}>Events</Nav.Link>
+                        <Nav.Link smooth as={Link} to={`/avant/events`}>Events</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link smooth as={Link} to={`/avant/#gallery`}>Gallery</Nav.Link>
+                        <Nav.Link smooth as={Link} to={`/avant/gallery`}>Gallery</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link smooth as={Link} to={`/avant/resources`}>Resources</Nav.Link>
@@ -42,7 +42,7 @@ function Navigation(props) {
                         <Nav.Link smooth as={Link} to={`/avant/projects`}>Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link smooth as={Link} to={`/avant/pastCoordinators`}>Past Coordinators</Nav.Link>
+                        <Nav.Link smooth as={Link} to={`/avant/past-coordinators`}>Past Coordinators</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link smooth as={Link} to={`/avant/#contact`}>Contact Us</Nav.Link>

@@ -9,7 +9,7 @@ function Home(props) {
             <Route path="/#about" />
             <Route path="/#clubs"/>
             <Route path="/#contact"/>
-            <Route path="/past-council"/>
+            <Route path="/past-council" component={MainPages.PastCouncil} />
             <Route exact path="/" component={MainPages.Home} />
         </Switch>
     );

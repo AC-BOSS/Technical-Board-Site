@@ -1,18 +1,27 @@
 import React from 'react';
-import Events from '../components/Events';
+import Section from '../components/common/Section';
+import SectionHeader from '../components/common/SectionHeader';
+import Calendar from '../components/common/Calendar';
+import UpcomingEvents from '../components/UpcomingEvents';
+import PastEvents from '../components/PastEvents';
 
-function EventsPage() {
-    return ( 
-        <div>
-            {/* This component will render the heading in the form:-
-            Name
-            (Alternative Name)
-
-            If none of the above are provided, then the component will
-            only generate a link with an Image */}
-            <Events />
-        </div>
-    );
+class EventsPage extends React.Component {
+    render() {
+        //TODO: Implement Calendar
+        return (
+            <React.Fragment>
+                <Section>
+                    <SectionHeader>Upcoming Events</SectionHeader>
+                    <Calendar />
+                    <UpcomingEvents />
+                </Section>
+                <Section>
+                    <SectionHeader>Past Events</SectionHeader>
+                    <PastEvents />
+                </Section>
+            </React.Fragment>
+        );
+    }
 }
 
 export default EventsPage;

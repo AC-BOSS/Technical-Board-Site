@@ -37,7 +37,7 @@ function Footer(props) {
           <Col sm={12} md={4} className={Styles.col}>
             <FooterHeadings>Other Pages</FooterHeadings>
             <ButtonGroup vertical>
-              <FooterItem to="/council">Council</FooterItem>
+              <FooterItem to="/past-council">Past Council</FooterItem>
               <FooterItem href="https://github.com/mynameisankit/technicalBoard/wiki">Documentation</FooterItem>
             </ButtonGroup>
           </Col>

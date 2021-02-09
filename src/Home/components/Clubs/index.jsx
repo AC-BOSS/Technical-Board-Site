@@ -36,7 +36,6 @@ class Clubs extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <Section id={this.props.id}>
                 <SectionHeader>Our Clubs</SectionHeader>

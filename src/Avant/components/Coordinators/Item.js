@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Styles from './item.module.css';
-import Icons from './Icons';
+import ProfileLinks from '../common/ProfileLinks';
 
 function Entry(props) {
     const variants = {
@@ -20,7 +20,7 @@ function Entry(props) {
                         <Card.Text>
                             {props.data.caption}
                         </Card.Text>
-                        <Icons />
+                        <ProfileLinks className={Styles.linksWrapper} colour='white' />
                     </Card.Body>
                 </Card.ImgOverlay>
             </Card>

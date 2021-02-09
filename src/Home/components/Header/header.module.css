@@ -12,14 +12,12 @@
 .heading {
     font-family: var(--avant-font);
     margin: 0px;
-    font-size: 100px;
     filter: drop-shadow(0px 0px 100px #000000);
 }
 
 .subHeading {
     font-family: var(--avant-font);
     margin: 0px;
-    font-size: 35px;
     filter: drop-shadow(0px 0px 100px #000000);
 }
 
@@ -34,6 +32,14 @@
         height: 300px;
         width: 300px;
     }
+
+    .heading {
+        font-size: 80px;
+    }
+
+    .subHeading {
+        font-size: 25px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -41,5 +47,13 @@
     .image {
         height: 600px;
         width: 600px;
+    }
+    
+    .heading {
+        font-size: 100px;
+    }
+
+    .subHeading {
+        font-size: 35px;
     }
 }
