@@ -24,5 +24,5 @@ yarn start
 
 This will start the project.
 
-<ins>**Important note for Contributors**</ins>
+<ins>**Important note for Contributors**</ins><br />
 All contributions towards any ***.md*** files will be flagged with ***spam***. If you want to contribute to the documentation of the project then please contribute to the wiki of the project.
