@@ -25,7 +25,7 @@ yarn start
 This will start the project.
 
 ## Important note for Contributors ##
-All contributions towards any ***.md*** files will be flagged with ***spam***. If you want to contribute to the documentation of the project then please contribute to the wiki of the project.
+All contributions towards any **.md** files will be flagged with **spam**. If you want to contribute to the documentation of the project then please contribute to the wiki of the project.
 
 ## Project Lead ##
 - Akshay Jain
