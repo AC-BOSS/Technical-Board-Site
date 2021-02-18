@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton';
 import Section from '../common/Section';
 import heading from './images/aboutHeading.svg';
 import image from './images/about.svg';
-import Spinner from '../common/Effects/Spinner';
 import Styles from './about.module.css';
 //Firebase
 import firebase from '../../firebase';
@@ -13,7 +13,7 @@ class About extends React.Component {
         super(props);
         this.state = {
             width: window.innerWidth,
-            content: ''
+            content: null,
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         window.addEventListener('resize', this.updateWindowDimensions);
@@ -31,14 +31,14 @@ class About extends React.Component {
         db.collection('about').get().then(snapshot => {
             this.setState(state => ({
                 width: state.width,
-                content: snapshot.docs[0].data()['content']
+                content: snapshot.docs[0] ? snapshot.docs[0].data()['content'] : null,
             }));
         });
     }
 
     render() {
         let headingStyle;
-        if(this.state.width <= 600) {
+        if (this.state.width <= 600) {
             headingStyle = {
                 transform: "rotate(90deg)"
             };
@@ -52,19 +52,15 @@ class About extends React.Component {
                 <Container fluid className={Styles.aboutUs}>
                     <Row>
                         <Col md={3}>
-                            <Image src={heading} className={Styles.heading} style={headingStyle}/>
+                            <Image src={heading} className={Styles.heading} style={headingStyle} />
                         </Col>
                         <Col>
                             <Image src={image} className={Styles.image}></Image>
-                            {(this.state.content !== '') ?
-                                (
-                                    <p className={Styles.content}>
-                                        {this.state.content}
-                                    </p>
-                                ) : (
-                                    <Spinner />
-                                )
-                            }
+                            <p className={Styles.content}>
+                                {this.state.content ? this.state.content : (
+                                    <Skeleton count={8} />
+                                )}
+                            </p>
                         </Col>
                     </Row>
                 </Container>

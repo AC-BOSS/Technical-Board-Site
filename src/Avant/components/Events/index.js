@@ -3,7 +3,6 @@ import SectionHeader from '../common/SectionHeader';
 import Section from '../common/Section';
 import Link from '../common/Link';
 import Grid from './Grid';
-import Spinner from '../common/Effects/Spinner';
 //Firebase
 import firebase from '../../firebase';
 
@@ -17,23 +16,25 @@ class Events extends React.Component {
     componentDidMount() {
         const db = firebase.firestore();
         db.collection('events').where('name', '==', 'avant').get().then(snapshot => {
-            const content = snapshot.docs[0].data().list;
+            const content = snapshot.docs[0] && snapshot.docs[0].data().list;
 
-            let events = content.map(event => (
-                {
-                    title: event.name,
-                    image: "https://appsmaventech.com/images/blog/The-Evolution-Of-Web-Development-Via-Machine-Learning.jpg",
-                    description: "Introduction"
+            if (content) {
+                let events = content.map(event => (
+                    {
+                        title: event.name,
+                        image: "https://appsmaventech.com/images/blog/The-Evolution-Of-Web-Development-Via-Machine-Learning.jpg",
+                        description: "Introduction"
+                    }
+                ));
+
+                if (this.props.small) {
+                    events = events.slice(0, events.length >= 6 ? 6 : events.length);
                 }
-            ));
 
-            if(this.props.small) {
-                events = events.slice(0, events.length >= 6 ? 6 : events.length); 
+                this.setState({
+                    events: events
+                });
             }
-
-            this.setState({
-                events: events
-            });
         });
     }
 
@@ -41,12 +42,7 @@ class Events extends React.Component {
         return (
             <Section id={this.props.id} style={this.props.style}>
                 <SectionHeader>Events</SectionHeader>
-                {   this.state ? (
-                    <Grid data={this.state.events} />
-                ) : (
-                        <Spinner />
-                    )
-                }
+                <Grid data={this.state && this.state.events} />
                 {   (this.props.small && !this.props.big) &&
                     (<Link href={this.props.href} small>Load More</Link>)
                 }

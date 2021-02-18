@@ -5,10 +5,19 @@ import Item from './Item';
 
 function Grid(props) {
     const images = props.children;
+    let items;
 
-    const items = images.map(image => {
-        return (<Item key={image.title} alt={image.description} src={image.src} title={image.title} />);
-    });
+    if(images) {
+        items = images.map(image => {
+            return (<Item key={image.title} alt={image.description} src={image.src} title={image.title} />);
+        });
+    }
+    else {
+        items = [];
+        for(let i = 0; i < 6; i++) {
+            items.push(<Item skeleton />);
+        }
+    }
 
     return (
         <Container fluid className={Styles.grid}>
