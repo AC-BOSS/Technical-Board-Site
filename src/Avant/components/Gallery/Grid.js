@@ -15,7 +15,7 @@ function Grid(props) {
     else {
         items = [];
         for(let i = 0; i < 6; i++) {
-            items.push(<Item skeleton />);
+            items.push(<Item key={i} skeleton />);
         }
     }
 
