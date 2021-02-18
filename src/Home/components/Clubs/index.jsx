@@ -25,12 +25,12 @@ class Clubs extends React.Component {
     componentDidMount() {
         const db = firebase.firestore();
         db.collection("club-description").get().then(snapshot => {
-            const data = snapshot.docs[0].data();
+            const data = snapshot.docs[0] ? snapshot.docs[0].data() : null;
             this.setState({
-                avant: data.avant.content,
-                gdsc: data.gdsc.content,
-                mavericks: data.mavericks.content,
-                robotics: data.robotics.content,
+                avant: data ? data.avant.content : null,
+                gdsc: data ? data.gdsc.content : null,
+                mavericks: data ? data.mavericks.content : null,
+                robotics: data ? data.robotics.content : null,
             });
         });
     }

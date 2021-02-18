@@ -1,8 +1,8 @@
 import React from 'react';
 import Section from '../common/Section';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import Skeleton from 'react-loading-skeleton';
 import AboutImage from './images/people.svg';
-import Spinner from '../common/Effects/Spinner';
 import Styles from './about.module.css';
 //firebase
 import firebase from '../../firebase';
@@ -19,7 +19,7 @@ class About extends React.Component {
         const db = firebase.firestore();
         db.collection('about').get().then(snapshot => {
             this.setState(state => ({
-                content: snapshot.docs[0].data()['content']
+                content: snapshot.docs[0] ? snapshot.docs[0].data()['content'] : null,
             }));
         });
     }
@@ -35,15 +35,11 @@ class About extends React.Component {
                             </Col>
                             <Col className={Styles.content}>
                                 <h1 className={Styles.title}>About Us</h1>
-                                {
-                                    this.state.content ? (
-                                        <p className={Styles.description}>
-                                            {this.state.content}
-                                        </p>
-                                    ) : (
-                                            <Spinner />
-                                        )
-                                }
+                                <p className={Styles.description}>
+                                    {this.state.content ? this.state.content : (
+                                        <Skeleton count={10} />
+                                    )}
+                                </p>
                             </Col>
                         </Row>
                     }

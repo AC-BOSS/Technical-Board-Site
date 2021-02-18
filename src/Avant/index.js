@@ -6,7 +6,7 @@ import './avant.module.css';
 
 function Avant(props) {
     return (
-        <SkeletonTheme color="#202020" highlightColor="#444">
+        <SkeletonTheme color="#a8a7a7" highlightColor="#b5b5b5">
             <Switch>
                 <Route path="/avant/gallery" component={Pages.Gallery} />
                 <Route path="/avant/events" component={Pages.Event} />

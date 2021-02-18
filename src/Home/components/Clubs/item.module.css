@@ -1,6 +1,10 @@
-.Container {
+.container {
     margin-top: 3vh;
     margin-bottom: 3vh;
+}
+
+.col {
+    padding: 0px;
 }
 
 .item {
@@ -19,20 +23,18 @@
     height: 100%;
 }
 
-.contentContainer {
-    text-align: center;
+/* Content */
+.contentWrapper {
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    justify-content: space-between;
 }
 
 .content {
-    height: 100%;
-    padding: 30px;
-    align-self: flex-start;
+    text-align: center;
+    padding: 5vh;
 }
 
 .title {
@@ -43,13 +45,13 @@
     margin-top: 2vh;
 }
 
-.linksContainer {
-    align-self: flex-end;
+.linkCol {
+    padding: 0px;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 800px) {
-    .Col {
+    .col {
         height: auto;
     }
 
@@ -64,7 +66,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 801px) {
-    .Col {
+    .col {
         height: 350px;
     }
 
