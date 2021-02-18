@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Clubs from '../components/Clubs';
 import Contact from '../components/Contact';
-import PresentCouncil from '../components/PresentCouncil';
+import PresentCouncil from '../components/Present-Council';
 //Images
 import Image from './images/header.svg';
 import './home.module.css';
