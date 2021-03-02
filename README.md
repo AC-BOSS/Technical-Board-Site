@@ -34,6 +34,9 @@ All contributions towards any **.md** files will be flagged with **spam**. If yo
  - Ayush Choudhury
    - [Github](https://github.com/iloveyousunflower)
    - [LinkedIn](https://www.linkedin.com/in/ayush-choudhury-9761b6113/)
+ - Prakhar Gupta
+   - [Github](https://www.linkedin.com/in/prakhar-gupta-7048211a0/)
+   - [LinkedIn](https://www.linkedin.com/in/prakhar-gupta-7048211a0/)
  - Ankit Kumar
    - [Github](https://github.com/mynameisankit)
    - [LinkedIn](https://www.linkedin.com/in/mynameisankit/)
