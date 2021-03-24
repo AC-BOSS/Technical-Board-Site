@@ -28,12 +28,6 @@ This will start the project.
 All contributions towards any **.md** files will be flagged with **spam**. If you want to contribute to the documentation of the project then please contribute to the wiki of the project.
 
 ## Project Lead ##
-- Akshay Jain
-  - [Github](https://github.com/i-rebel-aj)
-  - [LinkedIn](https://www.linkedin.com/in/akshay-j-11b347137/)
- - Ayush Choudhury
-   - [Github](https://github.com/iloveyousunflower)
-   - [LinkedIn](https://www.linkedin.com/in/ayush-choudhury-9761b6113/)
  - Ankit Kumar
    - [Github](https://github.com/mynameisankit)
    - [LinkedIn](https://www.linkedin.com/in/mynameisankit/)
