@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 //Clubs
 import Avant from './Avant';
+import Mavericks from './Mavericks';
 //Home Page
 import Home from './Home';
 //App Globals
@@ -23,6 +24,7 @@ function App() {
             {/* Routes */}
             <Home />
             <Avant />
+            <Mavericks />
 
             {/* Footer Component */}
             <Footer page={page} />
