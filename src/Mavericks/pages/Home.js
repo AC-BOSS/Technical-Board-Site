@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import Contact from '../components/Contact';
 
+import HeaderImage from './images/header-fg.png';
+
 function Home(props) {
     const sectionColour = "#73cdff";
 
@@ -14,11 +16,11 @@ function Home(props) {
             If none of the above are provided, then the component will
             only generate a link with an Image */}
             <Header id="header" data={{
-                name: "Mavericks", 
+                name: "MAVERICKS", 
                 altName: "Machine Learning Club of IIITG",
                 link: "/mavericks/projects",
                 linkText: "Our Projects",
-                // image: HeaderImage,
+                image: HeaderImage,
                 // bg: BackgroundImage
             }} />
             

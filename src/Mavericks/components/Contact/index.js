@@ -1,17 +1,14 @@
 import React from 'react';
 import Section from '../../../Avant/components/common/Section';
-// import Section from 'src/Avant/components/common/Section'
 import { Container, Row, Col, Form, Button, Alert, Image } from 'react-bootstrap';
 import SectionHeader from '../../../Avant/components/common/SectionHeader';
-// import SectionHeader from 'src/Avant/components/common/SectionHeader'
 import Map from '../../../Avant/components/common/Map';
-// import Map from 'src/Avant/components/common/Map';
 import Styles from './contact.module.css';
 //Images
 import ChatImage from './images/chat.svg';
 //Firebase
 // import firebase from '../../firebase';
-// src/Avant/components/common/Map/index.js
+
 class Contact extends React.Component {
 
     constructor(props) {

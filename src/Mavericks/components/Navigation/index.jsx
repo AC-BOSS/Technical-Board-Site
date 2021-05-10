@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Image } from 'react-bootstrap';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import Styles from './nav.module.css';
-import AvantLogo from '../../../Avant/Logo/avant.svg';
+import MavericksLogo from './logos/machine_learning.jpeg';
 
 function Navigation(props) {
     return (
@@ -10,7 +10,7 @@ function Navigation(props) {
             
             {/* Brand */}
             <Navbar.Brand as={Link} to="/mavericks">
-                <Image src={AvantLogo} className={`${Styles.image} d-inline-block`} alt="Logo" />
+                <Image src={MavericksLogo} className={`${Styles.image} d-inline-block`} alt="Logo" />
             </Navbar.Brand>
 
             {/* Toggler */}
