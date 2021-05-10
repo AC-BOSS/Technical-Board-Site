@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Link from '../../../Avant/components/common/Link';
-import Section from '../../../Avant/components/common/Section';
+import Link from '../Link';
 import Styles from './header.module.css';
 
 function Header(props) {
@@ -45,7 +44,6 @@ function Header(props) {
 
     //Return the Component
     return (
-        <Section style={style}>
             <Container fluid className={Styles.header}>
                 <Row>
                     <Col>
@@ -58,8 +56,11 @@ function Header(props) {
                         <img className={Styles.image} src={props.data.image} alt="Header Vector Art" />
                     </Col>
                 </Row>
+                <div className = {Styles.quote}>
+                    <p>Computers are able to see and learn. Welcome to the future</p>
+                    <p className={Styles.author}>-David Walters</p>
+                </div>
             </Container>
-        </Section>
     );
 }
 

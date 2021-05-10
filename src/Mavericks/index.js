@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { SkeletonTheme } from "react-loading-skeleton";
 import Pages from './pages';
+import './mavericks.module.css';
 
 function Mavericks(props) {
     return(
