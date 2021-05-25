@@ -38,7 +38,7 @@ class About extends React.Component {
 
     render() {
         let headingStyle;
-        if (this.state.width <= 768) {
+        if (this.state.width <= 767) {
             headingStyle = {
                 transform: "rotate(90deg)"
             };
